@@ -89,11 +89,11 @@
             <h2>Let's Talk About Your Bottom Line</h2>
             <p style="margin-bottom: 2rem;">Fill out the form below and we will get back to you within 24 hours.</p>
             
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email Address" required>
-                <input type="text" placeholder="Company Name">
-                <textarea rows="5" placeholder="How can we help you?" required></textarea>
+            <form action="https://formspree.io/f/mykolyaz" class="contact-form" method="POST">
+                <input type="email" name="email" placeholder="Your Email Address" required>
+                <textarea rows="5" placeholder="How can we help you?" name="message" required></textarea>
+                <input type="text" name="sender-name" placeholder="Your Name" required>
+                <input type="text" name="company-name" placeholder="Company Name">
                 <button type="submit" class="btn">Send Message</button>
             </form>
         </div>
