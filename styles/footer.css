@@ -1,0 +1,107 @@
+/* ========================================
+   Footer — Layout, Social Icons &
+   Image Attributions
+   ======================================== */
+
+/* ===========================
+   Footer Base
+   =========================== */
+footer {
+  background: var(--black);
+  color: var(--white);
+  padding: 2rem 0;
+}
+
+/* ===========================
+   Footer Container (text + icons)
+   =========================== */
+.footer-container {
+  width: 90%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-container p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* ===========================
+   Social Media Icons
+   =========================== */
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover img,
+.social-links a:focus-visible img {
+  opacity: 0.7;
+  transform: translateY(-3px);
+}
+
+/* Mobile footer */
+@media (max-width: 600px) {
+  .footer-container {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* ===========================
+   Image Attributions (collapsible)
+   =========================== */
+.img-attributions {
+  font-size: 0.75rem;
+  width: 90%;
+  max-width: var(--container-max-width);
+  margin: 1.5rem auto 0;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: left;
+}
+
+.img-attributions summary {
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+  font-size: 0.8rem;
+}
+
+.img-attributions summary:hover {
+  opacity: 0.8;
+}
+
+.img-attributions ul {
+  margin-top: 0.75rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+.img-attributions li {
+  margin-bottom: 4px;
+}
+
+.img-attributions a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.img-attributions a:hover,
+.img-attributions a:focus-visible {
+  color: var(--white);
+}

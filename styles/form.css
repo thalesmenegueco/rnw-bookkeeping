@@ -1,0 +1,117 @@
+/* ========================================
+   Contact Form — Inputs, Button, Focus
+   & Validation States
+   ======================================== */
+
+/* ===========================
+   Form Layout
+   =========================== */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+.form-field {
+  width: 100%;
+}
+
+/* ===========================
+   Inputs & Textarea
+   =========================== */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  box-sizing: border-box;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background: var(--white);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.15);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #999;
+}
+
+/* Validation states */
+.contact-form input:user-invalid,
+.contact-form textarea:user-invalid {
+  border-color: #dc2626;
+}
+
+.contact-form input:user-valid,
+.contact-form textarea:user-valid {
+  border-color: #16a34a;
+}
+
+/* ===========================
+   Submit Button
+   =========================== */
+.btn {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: var(--font-body);
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  align-self: flex-start;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Loading state (applied via JS while submitting) */
+.btn.loading {
+  position: relative;
+  color: transparent;
+  pointer-events: none;
+}
+
+.btn.loading::after {
+  content: '';
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: 24px;
+  height: 24px;
+  margin: -12px 0 0 -12px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: var(--white);
+  border-radius: 50%;
+  animation: btn-spin 0.6s linear infinite;
+}
+
+@keyframes btn-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}

@@ -6,128 +6,187 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RNW Bookkeeping Solutions</title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <!-- Google Fonts: Inter (body) + Lexend (headings) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles/style.css">
 </head>
-<nav>
-    <img href="#hero-section" src="assets/img/header-image-logo.png" alt="Logo image" class="header-image-logo" height="32" width="32">
-</nav>
+
 <body>
-    <header id="hero-section">
-        <h1>Focus on Your Business. <span class="special-contast-with-blue">We'll Handle the Books.</span></h1>
-        <p>Professional, accurate, and stress-free bookkeeping services to help your business grow.</p>
-        <a href="#form-section" class="hero-cta">Talk to an Expert</a>
-    </header>
-    
-    <section class="section-light container">
-        <h2>Why Do You Need a Bookkeeper?</h2>
-        <div class="grid-3">
-            <div class="card">
-                <img src="assets/img/wall-clock.png" alt="Clock icon" width="100" height="100">
-                <h3>Save Valuable Time</h3>
-                <p>Stop spending your weekends categorizing expenses. Reclaim your time to focus on scaling your business and doing what you do best.</p>
-            </div>
-            <div class="card">
-                <img src="assets/img/coin.png" alt="Coin icon" width="100" height="100">
-                <h3>Maximize Deductions</h3>
-                <p>Don't leave money on the table. We ensure every eligible business expense is tracked so you save money during tax season.</p>
-            </div>
-            <div class="card">
-                <img src="assets/img/relieved.png" alt="Calm face icon" width="100" height="100">
-                <h3>Peace of Mind</h3>
-                <p>Sleep better at night knowing your financials are 100% accurate, up-to-date, and audit-ready. No more financial guesswork.</p>
-            </div>
-        </div>
-    </section>
-    
-    <section class="section-gray">
-        <div class="container">
-            <h2>The Numbers Speak for Themselves</h2>
-            <p>Real results for real businesses.</p>
+    <!-- Skip to Content Link (Accessibility) -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="navbar" aria-label="Main navigation">
+        <a href="#hero-section" class="nav-logo-link" aria-label="Go to top">
+            <img src="assets/img/header-image-logo.png" alt="RNW Bookkeeping Solutions logo" class="header-image-logo" height="32" width="32">
+            <span class="nav-brand">RNW Bookkeeping</span>
+        </a>
+        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="#why-section">Why Us</a></li>
+            <li><a href="#stats-section">Results</a></li>
+            <li><a href="#testimonials-section">Reviews</a></li>
+            <li><a href="#form-section">Contact</a></li>
+        </ul>
+        <a href="#form-section" class="nav-cta">Get Started</a>
+    </nav>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <header id="hero-section">
+            <div class="hero-bg"></div>
+            <h1>Focus on Your Business. <span class="special-contrast-with-blue">We'll Handle the Books.</span></h1>
+            <p>Professional, accurate, and stress-free bookkeeping services to help your business grow.</p>
+            <a href="#form-section" class="hero-cta">Talk to an Expert</a>
+        </header>
+
+        <!-- Why Section -->
+        <section class="section-light container" id="why-section">
+            <h2>Why Do You Need a Bookkeeper?</h2>
             <div class="grid-3">
                 <div class="card">
-                    <p class="stat-number">Up to 10%</p>
-                    <p>of Money Saved in Tax Deductions</p>
+                    <img src="assets/img/wall-clock.png" alt="" width="100" height="100" aria-hidden="true">
+                    <h3>Save Valuable Time</h3>
+                    <p>Stop spending your weekends categorizing expenses. Reclaim your time to focus on scaling your business and doing what you do best.</p>
                 </div>
                 <div class="card">
-                    <p class="stat-number">120+</p>
-                    <p>Hours Saved per Year</p>
+                    <img src="assets/img/coin.png" alt="" width="100" height="100" aria-hidden="true">
+                    <h3>Maximize Deductions</h3>
+                    <p>Don't leave money on the table. We ensure every eligible business expense is tracked so you save money during tax season.</p>
                 </div>
                 <div class="card">
-                    <p class="stat-number">100%</p>
-                    <p>Audit-Ready Financials</p>
+                    <img src="assets/img/relieved.png" alt="" width="100" height="100" aria-hidden="true">
+                    <h3>Peace of Mind</h3>
+                    <p>Sleep better at night knowing your financials are 100% accurate, up-to-date, and audit-ready. No more financial guesswork.</p>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <section class="section-light container">
-        <h2>What Our Clients Say</h2>
-        <p>Swipe to read how we've helped businesses like yours.</p>
-        
-        <div class="testimonials-wrapper">
-            <div class="testimonial-card">
-                <p><em>"I really appreciate having someone qualified to take on the books and Ryan has and is currently trained by Bill Von Fumetti, CPA and his team. Ryan has displayed professionalism in his communication but also in how he makes sure my employees are paid and is looking ways for me to gain more profit. Thank you RNW Bookkeeping Solutions!"</em></p>
-                <strong>- Intuit review by Go and Shine Wash </strong>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="section-gray" id="stats-section">
+            <div class="container">
+                <h2>The Numbers Speak for Themselves</h2>
+                <p>Real results for real businesses.</p>
+                <div class="grid-3">
+                    <div class="card">
+                        <p class="stat-number" data-target="10" data-suffix="%" data-prefix="Up to ">0</p>
+                        <p>of Money Saved in Tax Deductions</p>
+                    </div>
+                    <div class="card">
+                        <p class="stat-number" data-target="120" data-suffix="+">0</p>
+                        <p>Hours Saved per Year</p>
+                    </div>
+                    <div class="card">
+                        <p class="stat-number" data-target="100" data-suffix="%">0</p>
+                        <p>Audit-Ready Financials</p>
+                    </div>
+                </div>
             </div>
-            <div class="testimonial-card">
-                <p><em>"I am very pleased with what Ryan has done for my company. He did good to send invoices and collect payment for services that were done. This has taken some of the load and helped me to focus on my work of converting tapes to digital formats, which took a lot of time. If you want to save time and gain more profit, get yourself a bookkeeper, like Ryan!"</em></p>
-                <strong>- Intuit review by eternoartsusa</strong>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="section-light container" id="testimonials-section">
+            <h2>What Our Clients Say</h2>
+            <p>Swipe to read how we've helped businesses like yours.</p>
+
+            <div class="testimonials-container">
+                <button class="testimonial-arrow testimonial-arrow--left" aria-label="Previous review">&#8249;</button>
+
+                <div class="testimonials-wrapper" role="region" aria-label="Client reviews" tabindex="0">
+                    <div class="testimonial-card">
+                        <p><em>"I really appreciate having someone qualified to take on the books and Ryan has and is currently trained by Bill Von Fumetti, CPA and his team. Ryan has displayed professionalism in his communication but also in how he makes sure my employees are paid and is looking ways for me to gain more profit. Thank you RNW Bookkeeping Solutions!"</em></p>
+                        <strong>- Intuit review by Go and Shine Wash</strong>
+                    </div>
+                    <div class="testimonial-card">
+                        <p><em>"I am very pleased with what Ryan has done for my company. He did good to send invoices and collect payment for services that were done. This has taken some of the load and helped me to focus on my work of converting tapes to digital formats, which took a lot of time. If you want to save time and gain more profit, get yourself a bookkeeper, like Ryan!"</em></p>
+                        <strong>- Intuit review by eternoartsusa</strong>
+                    </div>
+                    <div class="testimonial-card">
+                        <p><em>"I highly recommend this Bookkeeper! He made sure my employees were paid on time and communicated all updates that affected payroll. It's nice to have a bookkeeper so I can focus on my operations. Ryan and his team Junior and Larissa took my stress away! Thanks RNW BOOKKEEPING SOLUTIONS!"</em></p>
+                        <strong>- Intuit review</strong>
+                    </div>
+                </div>
+
+                <button class="testimonial-arrow testimonial-arrow--right" aria-label="Next review">&#8250;</button>
             </div>
-            <div class="testimonial-card">
-                <p><em>"I highly recommend this Bookkeeper! He made sure my employees were paid on time and communicated all updates that affected payroll. It's nice to have a bookkeeper so I can focus on my operations. Ryan and his team Junior and Larissa took my stress away! Thanks RNW BOOKKEEPING SOLUTIONS!"</em></p>
-                <strong>- Intuit review</strong>
+
+            <div id="dots-container" class="dots-container" role="tablist" aria-label="Review navigation"></div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="section-gray" id="form-section">
+            <div class="container">
+                <h2>Let's Talk About Your Bottom Line</h2>
+                <p style="margin-bottom: 2rem;">Fill out the form below and we will get back to you within 24 hours.</p>
+
+                <form action="https://formspree.io/f/mykolyaz" class="contact-form" method="POST">
+                    <div class="form-field">
+                        <label for="sender-name" class="visually-hidden">Your Name</label>
+                        <input type="text" id="sender-name" name="sender-name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="email" class="visually-hidden">Your Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="company-name" class="visually-hidden">Company Name</label>
+                        <input type="text" id="company-name" name="company-name" placeholder="Company Name">
+                    </div>
+                    <div class="form-field">
+                        <label for="message" class="visually-hidden">How can we help you?</label>
+                        <textarea id="message" rows="5" placeholder="How can we help you?" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
             </div>
-        </div>
-        <div class="testimonials-wrapper">
-        </div>
-        
-        <div id="dots-container" class="dots-container"></div>
-        
-    </section>
-    
-    <section class="section-gray" id="form-section">
-        <div class="container">
-            <h2>Let's Talk About Your Bottom Line</h2>
-            <p style="margin-bottom: 2rem;">Fill out the form below and we will get back to you within 24 hours.</p>
-            
-            <form action="https://formspree.io/f/mykolyaz" class="contact-form" method="POST">
-                <input type="email" name="email" placeholder="Your Email Address" required>
-                <textarea rows="5" placeholder="How can we help you?" name="message" required></textarea>
-                <input type="text" name="sender-name" placeholder="Your Name" required>
-                <input type="text" name="company-name" placeholder="Company Name">
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-        </div>
-    </section>
-    
+        </section>
+    </main>
+
+    <!-- Footer -->
     <footer>
         <div class="footer-container">
-            <p>&copy; 2026 Bookkeeping Services. All rights reserved.</p>
-            
+            <p>&copy; 2026 RNW Bookkeeping Solutions. All rights reserved.</p>
+
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/ryan-nicholas-wilson-7ba41137b/" target="_blank" rel="noopener">
-                    <img src="assets/img/linkedin-icon.svg" alt="LinkedIn Icon" width="32" height="32">
+                <a href="https://www.linkedin.com/in/ryan-nicholas-wilson-7ba41137b/" target="_blank" rel="noopener" aria-label="Visit us on LinkedIn">
+                    <img src="assets/img/linkedin-icon.svg" alt="" width="32" height="32" aria-hidden="true">
                 </a>
-                <a href="https://www.instagram.com/rnwbookkeepingsolutionsllc" target="_blank" rel="noopener">
-                    <img src="assets/img/instagram-icon.svg" alt="Instagram Icon" width="32" height="32">
+                <a href="https://www.instagram.com/rnwbookkeepingsolutionsllc" target="_blank" rel="noopener" aria-label="Visit us on Instagram">
+                    <img src="assets/img/instagram-icon.svg" alt="" width="32" height="32" aria-hidden="true">
                 </a>
-                <a href="https://www.facebook.com/profile.php?id=61562833517670" target="_blank" rel="noopener">
-                    <img src="assets/img/facebook-icon.svg" alt="Facebook Icon" width="32" height="32">
+                <a href="https://www.facebook.com/profile.php?id=61562833517670" target="_blank" rel="noopener" aria-label="Visit us on Facebook">
+                    <img src="assets/img/facebook-icon.svg" alt="" width="32" height="32" aria-hidden="true">
+                </a>
+                <a href="https://www.tiktok.com" target="_blank" rel="noopener" aria-label="Visit us on TikTok">
+                    <img src="assets/img/tiktok-icon.svg" alt="" width="32" height="32" aria-hidden="true">
                 </a>
             </div>
         </div>
-        <div class="img-attributtions">
-            <p>Imagens por:</p>
-            <ul>
-                <li><a href="https://www.flaticon.com/free-icons/coin" title="coin icons">Coin icons created by Ardiansyah - Flaticon</a></li>
-                <li><a href="https://www.flaticon.com/free-icons/watch" title="watch icons">Watch icons created by Freepik - Flaticon</a></li>
-                <li><a href="https://www.flaticon.com/free-icons/calm" title="calm icons">Calm icons created by Rahul Kaklotar - Flaticon</a></li>
-            </ul>
+
+        <div class="img-attributions">
+            <details>
+                <summary>Image attributions</summary>
+                <ul>
+                    <li><a href="https://www.flaticon.com/free-icons/coin" title="coin icons">Coin icons created by Ardiansyah - Flaticon</a></li>
+                    <li><a href="https://www.flaticon.com/free-icons/watch" title="watch icons">Watch icons created by Freepik - Flaticon</a></li>
+                    <li><a href="https://www.flaticon.com/free-icons/calm" title="calm icons">Calm icons created by Rahul Kaklotar - Flaticon</a></li>
+                </ul>
+            </details>
         </div>
     </footer>
-    
-    <script src="script.js"></script>
-    
+
+    <!-- Back-to-top button (hidden by default) -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">&#8593;</button>
+
+    <script src="script.js" defer></script>
 </body>
 
 </html>

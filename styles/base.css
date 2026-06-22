@@ -1,0 +1,230 @@
+/* ========================================
+   Base Styles — Custom Properties, Reset,
+   Typography & Utility Classes
+   ======================================== */
+
+:root {
+  /* === Colors === */
+  --primary-color:        #1e3a8a;
+  --primary-hover:        #172a6b;
+  --secondary-color:      #f3f4f6;
+  --text-color:           #333;
+  --text-light:           #666;
+  --emphasis-color:       #fad042;
+  --white:                #ffffff;
+  --black:                #111111;
+
+  /* === Typography === */
+  --font-body:  'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Lexend', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  /* === Spacing === */
+  --container-max-width: 1100px;
+  --container-padding:   4rem 20px;
+
+  /* === Shadows === */
+  --shadow-card:    0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-card-lg: 0 8px 20px rgba(0, 0, 0, 0.1);
+  --shadow-testimonial: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  /* === Borders === */
+  --border-radius-sm: 6px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-color: #ccc;
+}
+
+/* ===========================
+   Reset
+   =========================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  color: var(--text-color);
+  line-height: 1.6;
+  background-color: var(--white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* ===========================
+   Typography
+   =========================== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--primary-color);
+  margin-top: 0;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.25rem; }
+
+/* ===========================
+   Container Utility
+   =========================== */
+.container {
+  width: 90%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: var(--container-padding);
+}
+
+/* ===========================
+   Section Backgrounds
+   =========================== */
+.section-light {
+  background-color: var(--white);
+  text-align: center;
+}
+
+.section-gray {
+  background-color: var(--secondary-color);
+  text-align: center;
+}
+
+/* ===========================
+   Accessibility Utilities
+   =========================== */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  z-index: 10000;
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 8px 16px;
+  font-weight: 600;
+  border-radius: 0 0 var(--border-radius-sm) 0;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* ===========================
+   Scroll-behavior (global)
+   =========================== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===========================
+   Reveal Animation (JS‑driven)
+   =========================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===========================
+   Back-to-Top Button
+   =========================== */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: var(--primary-color);
+  color: var(--white);
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease, background 0.2s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.back-to-top:hover,
+.back-to-top:focus-visible {
+  background: var(--primary-hover);
+  transform: translateY(-3px);
+}
+
+.back-to-top:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --container-padding: 3rem 16px;
+  }
+
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --container-padding: 2.5rem 16px;
+  }
+
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.1rem; }
+
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
+    font-size: 1.25rem;
+  }
+}
