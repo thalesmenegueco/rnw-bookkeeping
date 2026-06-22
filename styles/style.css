@@ -36,7 +36,7 @@ header {
   background-color: var(--primary-color);
   color: white;
   text-align: center;
-  padding: 6rem 20px;
+  padding: 2rem 20px 4rem 20px;
 }
 
 .header-image-logo {
@@ -53,6 +53,26 @@ header h1 {
 
 .special-contast-with-blue {
   color: var(--emphasis-for-blue-bkgrnd-color);
+}
+
+header p {
+  margin-bottom: 34px;
+}
+
+.hero-cta {
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #000000;
+  background: #fad042;
+  padding: 6px 16px;
+  justify-self: center;
+  text-decoration: none;
+  box-shadow: 4px 4px 0px 0px #000000;
+  transition: box-shadow 0.4s ease-in-out;
+}
+:hover .hero-cta {
+  box-shadow: 0px 0px 0px 0px #000000;
 }
 
 /* Grid Geral para seções de texto */
